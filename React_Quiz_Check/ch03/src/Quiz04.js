@@ -1,9 +1,9 @@
 function Quiz04(props) {
-   const { name, start, grade } = props
+   const { major, start, grade } = props
    return (
       <div>
-         <h2>{name} 성적</h2>
-         <h3>개강여부: {start}</h3>
+         <h2>{major} 성적</h2>
+         <h3>개강여부: {start.toString()}</h3>
          <ul>
             <li>{grade[0]}</li>
             <li>{grade[1]}</li>
