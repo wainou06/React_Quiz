@@ -11,9 +11,18 @@ function Quiz01() {
    const [inputName, setInputName] = useState('')
    const [inputDept, setInputDept] = useState('')
    const [nextId, setNextId] = useState(5)
+   const [inputRemoveDept, setInputRemoveDept] = useState('') //
 
    const onChangeName = (e) => setInputName(e.target.value)
    const onChangeDept = (e) => setInputDept(e.target.value)
+   const onRemoveDept = (e) => setInputRemoveDept(e.target.value) //
+
+   const onRemove = () => {
+      const removeDept = employees.filter((employee) => employee.dept !== inputRemoveDept)
+
+      setEmployees(removeDept)
+      setInputRemoveDept('')
+   }
 
    const onClick = () => {
       const nextEmployees = employees.concat({
@@ -38,6 +47,9 @@ function Quiz01() {
          <input placeholder="사원 이름" value={inputName} onChange={onChangeName} />
          <input placeholder="부서" value={inputDept} onChange={onChangeDept} />
          <button onClick={onClick}>추가</button>
+         <br />
+         <input placeholder="삭제할 부서" value={inputRemoveDept} onChange={onRemoveDept}></input>
+         <button onClick={onRemove}>부서별 삭제</button>
          <br />
          <ul>{employeeList}</ul>
       </>
