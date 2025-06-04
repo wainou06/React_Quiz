@@ -9,7 +9,13 @@ function Quiz02() {
    const { username, message } = form
 
    const onChange = (e) => {
-      // 이 부분 작성
+      setForm({ username: e.target.username, message: e.target.message })
+
+      const result = e.target.value.length
+      if (result > 20) {
+         alert(`20자를 초과해 작성 할 수 없습니다!`)
+         setForm({ username: '', message: '' })
+      }
    }
 
    const onClick = () => {

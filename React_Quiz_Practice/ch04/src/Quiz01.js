@@ -19,7 +19,13 @@ const Quiz01 = () => {
    }
 
    const onClick = () => {
-      // 이 부분 작성
+      alert(`더한값: ${Number(val1) + Number(val2) + Number(val3)}`)
+
+      setForm({
+         val1: 0,
+         val2: 0,
+         val3: 0,
+      })
    }
 
    const onKeyDown = (e) => {
