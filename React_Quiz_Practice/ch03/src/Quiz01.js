@@ -2,6 +2,7 @@ import App from './App.css'
 
 function Quiz01(props) {
    const { rain, wind, temp, children } = props
+   
    return (
       <div>
          <p>오늘은 {children}</p>
