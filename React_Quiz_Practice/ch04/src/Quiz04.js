@@ -33,6 +33,10 @@ function Quiz04() {
 
          <br />
 
+         {/* a && b = a true, B 출력 */}
+         {/* a || b = a true, a 출력 */}
+
+         {/* 이벤트에서 함수 실행시 매개변수가 있는 경우는 화살표 함수에서 실행 */}
          {display.level === 1 && <button onClick={() => ginwha('display2', 2)}>이상해씨 진화!</button>}
          {display.level === 2 && <button onClick={() => ginwha('display3', 3)}>이상해풀 진화!</button>}
          {display.level === 3 && <p>진화 끝!</p>}

@@ -10,18 +10,41 @@ const Quiz03 = () => {
 
    const pokesList = pokemons.map((poke) => (
       <li key={poke.id}>
-         <div>
+         <div onDoubleClick={() => onRemove(poke.id)}>
             <img src={poke.img} alt={poke.name} width="130" />
             <p>{poke.name}</p>
          </div>
       </li>
    ))
 
+   const [inputPokemon, setInputPokemon] = useState('')
+   const [nextId, setNextId] = useState(4)
+
+   const onChangeName = (e) => setInputPokemon(e.target.value)
+
+   const onClick = () => {
+      const nextPokes = pokemons.concat({
+         id: nextId,
+         name: inputPokemon,
+         img: `/images/${inputPokemon}.png`,
+      })
+
+      setPoke(nextPokes)
+      setNextId(nextId + 1)
+      setInputPokemon('')
+   }
+
+   const onRemove = (id) => {
+      const removePokes = pokemons.filter((pokes) => pokes.id !== id)
+
+      setPoke(removePokes)
+   }
+
    return (
       <>
          <h2>포켓몬 도감</h2>
-         <input></input>
-         <button>등록</button>
+         <input value={inputPokemon} onChange={onChangeName}></input>
+         <button onClick={onClick}>등록</button>
          <ul>{pokesList}</ul>
       </>
    )
