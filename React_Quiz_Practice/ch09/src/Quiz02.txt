@@ -10,13 +10,13 @@ function App() {
          <h1>리액트 라우터</h1>
          <ul>
             <li>
-               <a href="/">NewsPage</a>
+               <NavLink to="/">NewsPage</NavLink>
             </li>
             <li>
-               <a href="/category">Category</a>
+               <NavLink to="/category">Category</NavLink>
             </li>
             <li>
-               <a href="/newsList">NewsList</a>
+               <NavLink to="/newsList">NewsList</NavLink>
             </li>
          </ul>
          <Routes>

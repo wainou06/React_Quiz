@@ -1,5 +1,5 @@
 import './App.css'
-import { Routes } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
    return (
@@ -16,7 +16,32 @@ function App() {
                <a href="/newsList">NewsList</a>
             </li>
          </ul>
-         <Routes>{/* 이 부분 작성 */}</Routes>
+         <Routes>
+            <Route path="/" element="신문 기사 내용. 어쩌고 저쩌고... 신문 기사 내용. 어쩌고 저쩌고..." />
+            <Route
+               path="/category"
+               element={
+                  <ul>
+                     <li>전체보기</li>
+                     <li>엔터</li>
+                     <li>과학</li>
+                     <li>사회</li>
+                  </ul>
+               }
+            />
+            <Route
+               path="/newsList"
+               element={
+                  <ul>
+                     <li>기사제목1</li>
+                     <li>기사제목2</li>
+                     <li>기사제목3</li>
+                     <li>기사제목4</li>
+                     <li>기사제목5</li>
+                  </ul>
+               }
+            />
+         </Routes>
       </div>
    )
 }
