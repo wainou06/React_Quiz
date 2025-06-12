@@ -1,7 +1,22 @@
 import styled from 'styled-components'
 
 const Box = styled.div`
-   /* 여기에 코드 작성 */
+   width: ${(props) => {
+   if (props.size === 'small') {
+         return '100px'
+   } else if (props.size === 'medium') {
+      return '200px'
+   } else if (props.size === 'large') {
+      return '300px'
+      }
+   }};
+   height: ${(props) => {if (props.size === 'small') {
+      return '100px'
+   } else if (props.size === 'medium') {
+      return '200px'
+   } else if (props.size === 'large') {
+      return '300px'
+   }}};
    background-color: lightgray;
    margin: 10px;
 `

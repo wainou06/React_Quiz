@@ -4,7 +4,9 @@ const Container = styled.div`
    background-color: lightblue;
    padding: 20px;
 
-   /* 미디어 쿼리 코드 작성 */
+   @media (max-width: 600px) {
+      background-color: yellow;
+   }
 `
 
 function Quiz05() {
