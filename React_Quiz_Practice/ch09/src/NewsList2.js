@@ -12,7 +12,7 @@ function NewsList2() {
       // 여기에 코드 작성
       list.push(
          <li key={contents[i].id}>
-            <NavLink to={'/newsList' + contents[i].id}>{contents[i].title}</NavLink>
+            <NavLink to={'/newsList/' + contents[i].id}>{contents[i].title}</NavLink>
          </li>
       )
    }
