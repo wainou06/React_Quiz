@@ -7,9 +7,9 @@ const initialState = []
 function reducer(state, action) {
    switch (action.type) {
       case 'add':
-         return // 여기에 코드 작성
+         return [...state, { id: Date.now(), text: action.payload }]
       case 'delete':
-         return // 여기에 코드 작성
+         return state.filter((todo) => todo.id !== action.payload)
       default:
          return state
    }
@@ -22,13 +22,15 @@ const Quiz01 = () => {
    // 새로운 할 일 추가
    const handleAddTodo = () => {
       if (inputValue.trim()) {
-         //여기에 코드 작성
+         // type: 요청, payload: 리듀서에 전달할 요청 외의 데이터
+         dispatch({ type: 'add', payload: inputValue })
+         setInputValue('')
       }
    }
 
    // 할 일 삭제
    const handleDeleteTodo = (id) => {
-      //여기에 코드 작성
+      dispatch({ type: 'delete', payload: id })
    }
 
    return (
