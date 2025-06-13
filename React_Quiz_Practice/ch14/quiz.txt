@@ -1,0 +1,9 @@
+1. B
+2. C
+3. C
+4. B
+5. A -> D
+6. constructor - render - didMount
+7. C
+8. 컴포넌트가 업데이트 되고(state나 props가 바뀔때) 렌더링이 끝날때
+9. D
