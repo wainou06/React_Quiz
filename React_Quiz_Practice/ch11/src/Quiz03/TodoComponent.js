@@ -12,6 +12,7 @@ const TodoComponent = () => {
    const handleAddTodo = () => {
       if (inputValue.trim()) {
          dispatch({ type: 'add', payload: inputValue })
+         // Reducer에 action 전달 {type: 'add', payload: inputValue(사용자가 입력한 값)}
          setInputValue('')
       }
    }
@@ -19,6 +20,7 @@ const TodoComponent = () => {
    // 할 일 삭제
    const handleDeleteTodo = (id) => {
       dispatch({ type: 'delete', payload: id })
+      // Reducer에 action 전달 { type: 'delete', payload: id(Reducer에서 만든 id 값) }
    }
 
    return (
@@ -28,6 +30,7 @@ const TodoComponent = () => {
          <button onClick={handleAddTodo}>추가</button>
 
          <ul>
+            {/* 여기서 todos는 Reducer에서 만든 배열이다 */}
             {todos.map((todo) => (
                <li key={todo.id}>
                   {todo.text} <button onClick={() => handleDeleteTodo(todo.id)}>삭제</button>
