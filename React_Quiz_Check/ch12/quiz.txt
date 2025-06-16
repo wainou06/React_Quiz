@@ -1,0 +1,9 @@
+1. A
+2. up: (state, action) => {
+         // ★ 툴킷은 자동으로 불변성 유지를 해주므로 직접 state값을 바꿔도 된다
+         state.value += action.payload
+      }
+3. 정해둔 초기값(0), payload(up함수 up(받아오는 값)) => 2로 설정했기 때문에 2씩 늘어남
+4. 액션을 아직 취하지 않은 상태
+5. type: Slice에서 정한 이름 + reducers 이름/ payload: component에서 reducers 함수를 받아 괄호 안에 넣은 값 (2)
+6. 1- 불변성, 2- reducer와 slice, 3- toolkit은 액션을 자동으로 만들어줌
