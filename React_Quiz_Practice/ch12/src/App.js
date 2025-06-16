@@ -16,11 +16,11 @@ import storeQuiz04 from './Quiz04/store'
 import Counter from './Quiz04/Counter'
 
 function App() {
-   return (
+   /*  return (
       <Provider store={storeQuiz01}>
          <TodoApp />
       </Provider>
-   )
+   ) */
    // return (
    //    <Provider store={storeQuiz02}>
    //       <AuthStatus />
@@ -31,11 +31,11 @@ function App() {
          <ProductList />
       </Provider>
    ) */
-   /* return (
+   return (
       <Provider store={storeQuiz04}>
          <Counter />
       </Provider>
-   ) */
+   )
 }
 
 export default App
