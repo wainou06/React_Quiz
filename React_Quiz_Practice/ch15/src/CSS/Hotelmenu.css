@@ -1,0 +1,13 @@
+.menu_list {
+   list-style: none;
+   display: flex;
+}
+
+.menu_list li {
+   flex: 1;
+}
+
+.login_list {
+   list-style: none;
+   display: flex;
+}
