@@ -5,7 +5,6 @@ import { useEffect } from 'react'
 function MovieGenresList() {
    const dispatch = useDispatch()
    const { movieGenresList, loading, error } = useSelector((state) => state.movieGenres)
-   console.log(movieGenresList)
 
    useEffect(() => {
       dispatch(fetchMovieGenres())
