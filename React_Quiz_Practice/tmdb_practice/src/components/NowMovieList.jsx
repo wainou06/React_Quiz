@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchMovies } from '../features/nowmovieSlice'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function NowMovieList() {
    const dispatch = useDispatch()
@@ -18,9 +19,9 @@ function NowMovieList() {
          <h1>현재 상영중인 영화 목록</h1>
          <ul>
             {nowmovies.map((nowmovie) => (
-               <li key={nowmovie.id}>
-                  <a href={'/detail/' + nowmovie.id}>{nowmovie.title}</a>
-               </li>
+               <Link to={`/detail/${nowmovie.id}`} key={nowmovie.id}>
+                  <li>{nowmovie.title}</li>
+               </Link>
             ))}
          </ul>
       </div>

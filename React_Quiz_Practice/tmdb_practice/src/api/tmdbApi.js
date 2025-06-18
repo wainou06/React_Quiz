@@ -28,8 +28,24 @@ export const getNowMovies = async (page = 1) => {
 
 // 영화상세 정보 가져오기
 export const getMovieDetails = async (movieId) => {
-   const response = await tmdbApi.get(`/movie/${movieId}`)
+   const response = await tmdbApi.get(`/movie/${movieId}`, {
+      //쿼리스트링
+      params: {
+         language: 'ko-KR',
+      },
+   })
    return response //응답결과 데이터 리턴
+}
+
+// 영화 장르목록 가져오기
+export const getMovieGenres = async (page = 1) => {
+   const response = await tmdbApi.get('/genre/movie/list', {
+      //쿼리스트링
+      params: {
+         language: 'ko',
+      },
+   })
+   return response
 }
 
 export default tmdbApi
