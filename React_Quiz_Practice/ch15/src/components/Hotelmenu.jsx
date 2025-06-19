@@ -5,7 +5,7 @@ function Hotelmenu() {
    return (
       <div className="header">
          <Grid container className="header_menu">
-            <Grid size={{ xs: 2, md: 3 }}>
+            <Grid minWidth={150} size={{ xs: 2, md: 3 }}>
                <img src="https://picsum.photos/150/50" alt="" />
             </Grid>
             <Grid size={{ xs: 4, md: 5 }}>
